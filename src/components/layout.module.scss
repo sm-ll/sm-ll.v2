@@ -1,22 +1,154 @@
-$color: rebeccapurple;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap');
+
+$background: #efefefeb;
+$big-nav-background-color: #000;
+$dark-mode-text-color: #fff;
+$light-mode-text-color: #000;
+$padding: 3rem;
+$font-size: 2rem;
+$baseline: $font-size * 0.25;
+
+body {
+  font-family: 'IBM Plex Mono', monaco, monospace;
+}
 
 .container {
-  margin: auto;
-  max-width: 500px;
-  font-family: sans-serif;
+  margin: 0;
+  width: auto;
 }
 
 .heading {
-  color: $color;
+  color: $dark-mode-text-color;
 }
-.nav-links {
-  display: flex;
-  list-style: none;
-  padding-left: 0;
-}
+
 .nav-link-item {
-  padding-right: 2rem;
+  padding-bottom: $baseline;
 }
 .nav-link-text {
+  font-size: $font-size;
   color: black;
+}
+
+// big nav
+
+:root {  --big-nav-width: 100%;
+ --toggler-size: 30px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 20em) {
+
+html {  font-size: calc(0.8rem + 0.4 * (100vw - 20em) / 55);
+}
+}
+@media screen and (min-width: 75em) {
+
+html { font-size: 1.2rem; }
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: $background;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.big-nav, .content {
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.big-nav {
+  width: var(--big-nav-width);
+ // -webkit-transform: translateX(calc(var(--big-nav-width) * -1));
+ // transform: translateX(calc(var(--big-nav-width) * -1));
+  background-color: $big-nav-background-color;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  opacity: 0;
+}
+
+.content {
+  padding: $padding;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  // align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.nav-links { list-style-type: none; }
+
+.nav-link-text {
+  color: $dark-mode-text-color;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.nav-link-text:hover, .nav-link-text:focus, .nav-link-text:active { color: $dark-mode-text-color; }
+
+.menu-toggler {
+  display: block;
+  width: var(--toggler-size);
+  height: var(--toggler-size);
+  position: relative;
+  position: fixed;
+  top: $padding * 0.75;
+  right: $padding;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-toggler-square {
+  height: calc(var(--toggler-size));
+  background: $light-mode-text-color;
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.input-toggler {
+  position: absolute;
+  left: -100%;
+}
+
+.input-toggler:checked ~ .menu-toggler .menu-toggler-square { background: $dark-mode-text-color; }
+
+
+.input-toggler:checked ~ .big-nav {
+  // -webkit-transform: translateX(0);
+  // transform: translateX(0);
+  opacity: 1;
 }

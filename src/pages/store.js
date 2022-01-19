@@ -3,13 +3,13 @@ import * as React from 'react'
 import Layout from '../components/layout'
 
 // Step 2: Define your component
-const AboutPage = () => {
+const StorePage = () => {
   return (
-    <Layout pageTitle="About Me">
-      <p>Hi there! I'm the proud creator of this site, which I built with Gatsby.</p>
+    <Layout pageTitle="Store">
+      <p>This will include Snipcart cade snippet, so maybe a second layout is needed?</p>
     </Layout>
   )
 }
 
 // Step 3: Export your component
-export default AboutPage
+export default StorePage

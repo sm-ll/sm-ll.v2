@@ -24,6 +24,7 @@
     "gatsby-plugin-sass": "^5.5.0",
     "gatsby-source-filesystem": "^4.5.2",
     "netlify-cms-app": "^2.15.63",
+    "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
