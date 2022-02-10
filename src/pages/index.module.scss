@@ -1,0 +1,53 @@
+@import '../styles/styles.scss';
+
+.heading {
+  color: $dark-mode-text-color;
+  font-weight: normal;
+}
+
+.index-first, .index-second {
+	position: relative;
+	height: 100vh;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
+  img {
+  	object-fit: cover;
+  	height: 100%;
+    width: 100%;    
+  }
+}
+
+.background-information {
+  margin: $page-margin;
+}
+
+.information {
+	color: $grey;
+	list-style: none;
+	&::before {
+		content: "–";
+		margin-right: $gutter;
+	}
+}
+
+.button {
+	a {
+		background: none;
+		border: 1px solid $link-color;
+		text-decoration: none;
+		color: $link-color;
+		padding: $padding * 0.25 $padding * 0.75;
+		&:hover {
+			border: 1px solid $link-color-hover;
+			color: $link-color-hover;
+			text-decoration: none;
+		}
+	}
+}

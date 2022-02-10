@@ -1,60 +1,77 @@
 import * as React from 'react'
 import "normalize.css"
+import "@fontsource/ibm-plex-mono";
+import Typography from "typography"
 import { Link } from 'gatsby'
 import {
   container,
-  heading,
   inputToggler,
   menuToggler,
-  menuTogglerSquare,  
+  menuTogglerSquare,
+  menuOpen, 
+  menuClose,
   bigNav,
   navLinks,
   navLinkItem,
   navLinkText,
-  content
+  pageName,
+  footer,
+  footerNav,
+  year
 } from './layout.module.scss'
 
 
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
-      <title>{pageTitle}</title>
-      <input type="checkbox" id="menuToggler" className={inputToggler}/>
-      <label htmlFor="menuToggler" className={menuToggler}> <span className={menuTogglerSquare}></span></label>      
-      <nav className={bigNav}>
-        <ul className={navLinks}>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              Home
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/store" className={navLinkText}>
-              Store
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/cause-and-condition" className={navLinkText}>
-              Cause and Condition
-            </Link>
-          </li> 
-          <li className={navLinkItem}>
-            <Link to="/resources" className={navLinkText}>
-              Resources
-            </Link>
-          </li> 
-          <li className={navLinkItem}>
-            <Link to="/merge" className={navLinkText}>
-              Merge
-            </Link>
-          </li>         
-        </ul>
-      </nav>
-      <main className={content}>
-        <h1 className={heading}>{pageTitle}</h1>
+    <div>
+      <div className={container}>
+        <title>{pageTitle}</title>
+        <h1 className={pageName}>{pageTitle}</h1>
+        <input type="checkbox" id="menuToggler" className={inputToggler}/>
+        <label htmlFor="menuToggler" className={menuToggler}><span className={menuOpen}>Menu</span><span className={menuClose}>Close</span></label>      
+        <nav className={bigNav}>
+          <ul className={navLinks}>
+            <li className={navLinkItem}>
+              <Link to="/" className={navLinkText}>
+                Home
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/store" className={navLinkText}>
+                Store
+              </Link>
+            </li>
+            <li className={navLinkItem}>
+              <Link to="/cause-and-condition" className={navLinkText}>
+                Cause and Condition
+              </Link>
+            </li> 
+            <li className={navLinkItem}>
+              <Link to="/resources" className={navLinkText}>
+                Resources
+              </Link>
+            </li> 
+            <li className={navLinkItem}>
+              <Link to="/merge" className={navLinkText}>
+                Merge
+              </Link>
+            </li>         
+          </ul>
+        </nav>
         {children}
-      </main>
+      </div>
+      <div className={container}>
+        <footer className={footer}>
+          <div className={year}>2022.London</div>
+          <ul className={footerNav}>
+            <li><a href="https://github.com/sm-ll/samples">Github</a></li>
+            <li><Link to="/merge">Demos</Link></li>
+            <li><Link to="/privacy-policy">Privacy</Link></li>
+            <li><Link to="/merge">Contact</Link></li>
+          </ul>
+        </footer>
+      </div>
     </div>
   )
 }
