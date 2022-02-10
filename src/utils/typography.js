@@ -17,7 +17,6 @@ const typography = new Typography({
   bodyFontFamily: ["IBM Plex Mono", "serif"],
 	overrideStyles: ({ adjustFontSizeTo, scale, rhythm }, options) => ({
     "h1,h2,h3,h4,h5,h6,p": {
-    	fontWeight: "400"
     },
   }),  
 })
