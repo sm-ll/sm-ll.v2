@@ -11,18 +11,15 @@ import {
 } from './store.module.scss'
 
 
-
-// Step 2: Define your component
 const StorePage = () => {
   return (
     <Layout pageTitle="Store">
       <main className={content}>
-        <p className={banner}>Banner for store with some <a href="#">linked text</a></p>
+        <p className={banner}>All our vinyl is <a href="https://www.onecutvinyl.com" target="_blank">handcut to order</a> and comes with a free digital download. Our costs are your costs.</p>
         <Item></Item>
       </main>
     </Layout>
   )
 }
 
-// Step 3: Export your component
 export default StorePage

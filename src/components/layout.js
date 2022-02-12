@@ -1,5 +1,4 @@
 import * as React from 'react'
-import "normalize.css"
 import "@fontsource/ibm-plex-mono";
 import Typography from "typography"
 import { Link } from 'gatsby'
@@ -43,8 +42,13 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li>
             <li className={navLinkItem}>
-              <Link to="/cause-and-condition" className={navLinkText}>
-                Cause and Condition
+              <Link to="/support" className={navLinkText}>
+                Support
+              </Link>
+            </li>            
+            <li className={navLinkItem}>
+              <Link to="/mastering" className={navLinkText}>
+                Mastering
               </Link>
             </li> 
             <li className={navLinkItem}>

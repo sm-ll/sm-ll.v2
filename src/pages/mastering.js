@@ -5,10 +5,9 @@ import {
   content
 } from '../components/layout.module.scss'
 
-// Step 2: Define your component
-const CauseandconditionPage = () => {
+const MasteringPage = () => {
   return (
-    <Layout pageTitle="Cause and condition">
+    <Layout pageTitle="Mastering">
       <main className={content}>
         <p>This will probably link out to causeandcondition.com although maybe not from the navigation? possibly some basic stuff here with a link out in copy.</p>
       </main>
@@ -16,5 +15,4 @@ const CauseandconditionPage = () => {
   )
 }
 
-// Step 3: Export your component
-export default CauseandconditionPage
+export default MasteringPage

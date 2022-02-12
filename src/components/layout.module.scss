@@ -38,9 +38,8 @@ a, a:active, a:focus, a:hover, a:visited {
   position: absolute;
   top: $padding * 0.75;
   left: $padding;
-  font-size: 1.5em;
-  line-height: 1.5em;
-  font-weight: 400;
+  font-size: 1.25em;
+  line-height: 1.25em;
   margin: 0;
 }
 
@@ -72,7 +71,7 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 
 .nav-link-item {
-  padding-bottom: $baseline;
+  margin-bottom: $baseline;
 }
 
 .nav-link-text {
@@ -120,14 +119,14 @@ a, a:active, a:focus, a:hover, a:visited {
 
 .menu-toggler {
   display: block;
-  height: 30px;
+  // height: 30px;
   // width: calc(30px * 2.75);
   position: absolute;
   top: $padding * 0.75;
   right: $padding;
   cursor: pointer;
   z-index: 200;
-  line-height: 1.5em;
+  line-height: 1.25em;
 }
 
 .menu-toggler-square {
@@ -146,7 +145,7 @@ a, a:active, a:focus, a:hover, a:visited {
 }
 
 .menu-open, .menu-close {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .menu-close {
@@ -193,6 +192,8 @@ a, a:active, a:focus, a:hover, a:visited {
       display: inline-block;
       margin-left: $gutter;
       & a, a:active, a:focus, a:hover, a:visited {
+        font-weight: 400;
+        text-decoration: none;
         color: $grey;
       } 
     }

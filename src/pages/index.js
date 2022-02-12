@@ -10,39 +10,30 @@ import {
 import {
   backgroundImage,
   heading,
-  information,
   button,
   indexFirst,
   indexSecond,
   backgroundInformation
 } from './index.module.scss'
 
-
-// Step 2: Define your component
 const IndexPage = () => {
   return (
-    <Layout>
-{/*      <div className={backgroundImage}>
-        <img src={recordSleeve} alt="record in sleeve" />
-        <img src={record} alt="record" />
-      </div>     */}         
+    <Layout>      
       <main className={contentCenter}>
       <div className={indexFirst}>
-{/*        <div className={backgroundImage}>
-          <img src={recordSleeve} alt="record in sleeve" />
-        </div>*/}
+        <div className={backgroundImage}>
+          {/*<img src={recordSleeve} alt="record in sleeve" />*/}
+        </div>
         <div className={backgroundInformation}>
           <h1 className={heading}>Horizontal, anti-capitalist, anarchist behaviours beginning as an agile electronic music label</h1>
-          <p className={information}>What information would go here and what would it look like?</p>
         </div>
       </div>
       <div className={indexSecond}>
-{/*        <div className={backgroundImage}>
-          <img src={record} alt="record" />      
-        </div>*/}
+        <div className={backgroundImage}>
+          {/*<img src={record} alt="record" />      */}
+        </div>
         <div className={backgroundInformation}>
-          <h1 className={heading}>Horizontal, anti-capitalist, anarchist behaviours beginning as an agile electronic music label</h1>
-          <p className={information}>What information would go here and what would it look like?</p>
+          <h1 className={heading}>We reject hierarchal structures, embracing rotatable roles and challenging traditional fixed artist-label relationships. We do not align with the profit-motive nor believe in a society which does so. We cultivate a practice of voluntary, iterative and decentralised creativity around common interests such as repetitive, reductive, rhytmic and objectively good electronic music. Monarchy is inequality.</h1>
         </div>
       </div>      
       </main>
@@ -50,5 +41,4 @@ const IndexPage = () => {
   )
 }
 
-// Step 3: Export your component
 export default IndexPage

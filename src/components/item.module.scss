@@ -21,7 +21,7 @@
 	margin: 10px;
 	margin-bottom: 1px;
 	padding: $item-padding;
-	padding-bottom: $item-padding * 0.5;
+	padding-bottom: 0;
 }
 
 .item-title, .item-price {
@@ -29,35 +29,11 @@
 	margin-bottom: 0;
 }
 
-.item-bottom {
-	background: $white;
-	margin: 10px;
-	margin-top: 0;
-	padding: $item-padding;
-	padding-top: $item-padding * 1.5;
-}
-
 .item-description {
 	color: $black;
 	font-size: 12px;
-	margin-bottom: $baseline;
-
-}
-
-.item-features {
-	font-size: 12px;
-	list-style: none;
-	margin-left: 0;
-	margin-top: $item-padding;
+	margin-top: $baseline;
 	margin-bottom: 0;
-	li {
-		color: $grey;
-		margin-bottom: $baseline * 0.25;
-		&::before {
-			content: "–";
-			margin-right: $gutter;
-		}
-	}
 }
 
 .item-select {
@@ -76,4 +52,62 @@
 			background: $black;
 			color: $white;
 		}
+}
+
+.item-bottom {
+	background: $white;
+	margin: 10px;
+	margin-top: 0;
+	padding: $item-padding;
+	padding-top: $item-padding * 0.5;
+}
+
+.item-description {
+	color: $black;
+	font-size: 12px;
+	margin-top: $baseline;
+	margin-bottom: 0;
+}
+
+.item-tags {
+	font-size: 12px;
+	list-style: none;
+	margin-top: $baseline;
+	margin-bottom: 0;
+	margin-left: 0;
+	li {
+		display: inline-block;
+		color: $black;
+		margin-bottom: $baseline * 0.25;
+		margin-right: $gutter;
+		&::before {
+			content: "#";
+		}
+	}
+}
+
+.item-features {
+	font-size: 12px;
+	list-style: none;
+	margin-left: 0;
+	margin-top: $item-padding;
+	margin-bottom: 0;
+	li {
+		color: $grey;
+		margin-bottom: $baseline * 0.25;
+		&::before {
+			content: "–";
+			margin-right: $gutter;
+		}
+		span {
+			margin-left: $gutter;
+		}
+	}
+}
+
+.item-date {
+	color: $grey;
+	font-size: 12px;
+	margin-top: $baseline * 4;
+	margin-bottom: 0;
 }

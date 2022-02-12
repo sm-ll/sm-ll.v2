@@ -1,14 +1,10 @@
 @import '../styles/styles.scss';
 
 .heading {
-  color: $dark-mode-text-color;
-  font-weight: normal;
 }
 
 .index-first, .index-second {
-	background: $light-black;
 	position: relative;
-	height: 100vh;
 }
 
 .background-image {
@@ -26,16 +22,8 @@
 }
 
 .background-information {
-  margin: $page-margin;
-}
-
-.information {
-	color: $grey;
-	list-style: none;
-	&::before {
-		content: "–";
-		margin-right: $gutter;
-	}
+  padding: $padding * 6 $padding;;
+  background: #121212b5;
 }
 
 .button {
