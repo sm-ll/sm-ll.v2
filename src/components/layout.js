@@ -1,12 +1,10 @@
 import * as React from 'react'
 import "@fontsource/ibm-plex-mono";
-import Typography from "typography"
 import { Link } from 'gatsby'
 import {
   container,
   inputToggler,
   menuToggler,
-  menuTogglerSquare,
   menuOpen, 
   menuClose,
   bigNav,
@@ -57,8 +55,8 @@ const Layout = ({ pageTitle, children }) => {
               </Link>
             </li> 
             <li className={navLinkItem}>
-              <Link to="/merge" className={navLinkText}>
-                Merge
+              <Link to="/network" className={navLinkText}>
+                Network
               </Link>
             </li>         
           </ul>

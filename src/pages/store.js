@@ -15,7 +15,7 @@ const StorePage = () => {
   return (
     <Layout pageTitle="Store">
       <main className={content}>
-        <p className={banner}>All our vinyl is <a href="https://www.onecutvinyl.com" target="_blank">handcut to order</a> and comes with a free digital download. Our costs are your costs.</p>
+        <p className={banner}>All our vinyl is <a href="https://www.onecutvinyl.com" target="_blank" rel="noreferrer">handcut to order</a> and comes with a free digital download. Our costs are your costs.</p>
         <Item></Item>
       </main>
     </Layout>

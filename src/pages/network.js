@@ -6,9 +6,9 @@ import {
 } from '../components/layout.module.scss'
 
 // Step 2: Define your component
-const MergePage = () => {
+const NetworkPage = () => {
   return (
-    <Layout pageTitle="Merge">
+    <Layout pageTitle="Network">
       <main className={content}>
         <p>This page explains how to get involved.</p>
       </main>
@@ -17,4 +17,4 @@ const MergePage = () => {
 }
 
 // Step 3: Export your component
-export default MergePage
+export default NetworkPage

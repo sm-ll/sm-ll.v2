@@ -1,4 +1,6 @@
 import * as React from 'react'
+import "./button.css"
+import record from '../pages/record.jpg'
 
 import {
   itemList,
@@ -22,7 +24,17 @@ const Item = () => {
 		    	<h3 className={itemTitle}>UAN0009</h3>
 		    	<h3 className={itemPrice}>£20.99</h3>
 		    	<p className={itemDescription}>12" Black Cut Vinyl</p>
-		    	<button className={itemSelect}>Pre-order</button>
+		    	<button class="snipcart-add-item"
+		    		data-item-file-guid="ee5c2026-9be3-40ee-aaf9-623793debb3b"
+					  data-item-id="avatar"
+					  data-item-price="0.50"
+					  data-item-url="/store/avatar"
+					  data-item-description="#techno #dub #minimal"
+					  data-item-image={record}
+					  data-item-name="Avatar">
+					  Add to cart
+					</button>
+					<img src={record} alt="record" />
 	    	</div>
 	    	<div className={itemBottom}>
 		    	<ul className={itemTags}>

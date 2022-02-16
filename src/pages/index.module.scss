@@ -1,8 +1,5 @@
 @import '../styles/styles.scss';
 
-.heading {
-}
-
 .index-first, .index-second {
 	position: relative;
 }
@@ -13,7 +10,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -100;
+  z-index: -10;
   img {
   	object-fit: cover;
   	height: 100%;

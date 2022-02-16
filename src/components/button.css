@@ -1,0 +1,22 @@
+:root {
+	--black: #000;
+	---white: #fff;
+}
+
+.snipcart-add-item {
+		font-size: 12px;
+		word-spacing: -3px;
+		background: none;
+		border: 1px solid var(--black);
+		text-decoration: none;
+		color: var(--black);
+		padding: 0.75rem 0.5rem;
+		margin: 1rem 0;
+		width: 100%;
+		cursor: pointer;
+}
+
+.snipcart-add-item:hover {
+		background: var(--black);
+		color: var(--white);
+}

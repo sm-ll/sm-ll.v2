@@ -3,11 +3,11 @@
 .support-list {
 	list-style: none;
 	margin-left: 0;
+	text-align: center;
 	li {
 		font-size: 26px;
 		line-height: 1.15;
 		display: inline-block;
-		margin-right: $gutter * 1.5;
 		margin-bottom: 0;
 		a {
 			color: $grey;
