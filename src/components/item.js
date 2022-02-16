@@ -1,6 +1,6 @@
 import * as React from 'react'
 import "./button.css"
-import record from '../pages/record.jpg'
+import record from '../images/record.jpg'
 
 import {
   itemList,

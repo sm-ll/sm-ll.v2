@@ -1,8 +1,8 @@
 // Step 1: Import React
 import * as React from 'react'
 import Layout from '../components/layout'
-import record from './record.jpg'
-import recordSleeve from './record-sleeve.jpg'
+import record from '../images/record.jpg'
+import recordSleeve from '../images/record-sleeve.jpg'
 import {
   contentCenter
 } from '../components/layout.module.scss'
