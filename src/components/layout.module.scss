@@ -21,6 +21,11 @@ body {
 
 a, a:active, a:focus, a:hover, a:visited {
   color: $white;
+}
+
+img {
+  margin-bottom: 1rem;
+  display: block;
 } 
 
 .container {

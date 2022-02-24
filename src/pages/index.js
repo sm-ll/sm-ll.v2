@@ -1,6 +1,6 @@
 // Step 1: Import React
 import * as React from 'react'
-import Layout from '../components/layout'
+import Layout from '../components/index'
 import record from '../images/record.jpg'
 import recordSleeve from '../images/record-sleeve.jpg'
 import {
@@ -31,7 +31,7 @@ const IndexPage = () => {
           <img src={record} alt="record" />
         </div>
         <div className={backgroundInformation}>
-          <h1>We reject hierarchal structures, embracing rotatable roles and challenging traditional fixed artist-label relationships. We do not align with the profit-motive nor believe in a society that does so. We cultivate a practice of voluntary, iterative and decentralised creativity around common interests such as repetitive, reductive, rhytmic and objectively good electronic music. Monarchy is inequality.</h1>
+          <h1>We reject hierarchal structures, embracing rotatable roles and challenging traditional fixed artist-label relationships. We do not align with the profit-motive nor believe in a society that does so. We cultivate a practice of voluntary, iterative and decentralised creativity around common interests such as repetitive, reductive, rhytmic and objectively good electronic music.</h1>
         </div>
       </div>      
       </main>

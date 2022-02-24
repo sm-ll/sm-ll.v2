@@ -4,10 +4,17 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-      title: `sm-ll.v2`,
-    siteUrl: `https://www.yourdomain.tld`
+      title: `sm-ll`,
+    siteUrl: `https://www.sm-l.com`
   },
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home`,
+        path: `${__dirname}/home/`,
+      },
+    },  
     {
       resolve: `gatsby-plugin-typography`,
       options: {
