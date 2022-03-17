@@ -1,4 +1,4 @@
 backend:
-  name: github
-  repo: sm-ll/sm-ll.v2
+  name: git-gateway
+  repo: https://github.com/sm-ll/sm-ll.v2
   branch: master # Branch to update (optional; defaults to master)

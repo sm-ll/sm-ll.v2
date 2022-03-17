@@ -1,0 +1,120 @@
+@import '../styles/styles.scss';
+
+.item-list {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 -10px;
+}
+
+.item {
+	display: flex;
+	flex-flow: column;
+	width: 25%;
+	margin-bottom: $padding;
+	padding: 0;
+}
+
+.item-top {
+	background: $white;
+	margin: 10px;
+	margin-bottom: 1px;
+	padding: $item-padding;
+	img {
+		margin-top: $baseline;
+		margin-bottom: $baseline;
+	}
+}
+
+.item-artist, .item-title {
+	color: $black;
+	margin-bottom: 0;
+}
+
+.item-title a {
+	color: $black;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.item-price,
+.item-description,
+.item-quick-view {
+	color: $black;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.item-select {
+		font-size: 12px;
+		word-spacing: -3px;
+		background: none;
+		border: 1px solid $black;
+		text-decoration: none;
+		color: $black;
+		padding: $button-padding;
+		margin: $baseline * 2 0;
+		width: 100%;
+		cursor: pointer;
+		&:hover {
+			background: $black;
+			color: $white;
+		}
+}
+
+.item-bottom {
+	background: $white;
+	margin: 10px;
+	margin-top: 0;
+	padding: $item-padding;
+	padding-top: $item-padding * 0.5;
+}
+
+.item-description {
+	color: $black;
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+.item-tags {
+	font-size: 12px;
+	list-style: none;
+	margin-top: $baseline;
+	margin-bottom: 0;
+	margin-left: 0;
+	li {
+		display: inline-block;
+		color: $black;
+		margin-bottom: $baseline * 0.25;
+		margin-right: $gutter;
+		&::before {
+			content: "#";
+		}
+	}
+}
+
+.item-features {
+	font-size: 12px;
+	list-style: none;
+	margin-left: 0;
+	margin-top: $item-padding;
+	margin-bottom: 0;
+	li {
+		color: $grey;
+		margin-bottom: $baseline * 0.25;
+		&::before {
+			content: "–";
+			margin-right: $gutter;
+		}
+		span {
+			margin-left: $gutter;
+		}
+	}
+}
+
+.item-date {
+	color: $grey;
+	font-size: 12px;
+	margin-top: $baseline * 4;
+	margin-bottom: 0;
+}

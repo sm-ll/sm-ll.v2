@@ -1,38 +1,57 @@
-@import '../styles/styles.scss';
-
-.item-list {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	margin: 0 -10px;
-}
+@import '../../styles/styles.scss';
 
 .item {
-	display: flex;
-	flex-flow: column;
-	width: 25%;
 	margin-bottom: $padding;
 	padding: 0;
-	// border: 10px solid $black;
 }
-
 .item-top {
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;	
 	background: $white;
-	margin: 10px;
 	margin-bottom: 1px;
 	padding: $item-padding;
-	padding-bottom: 0;
+	img {
+		margin: 0;
+	}
 }
 
-.item-title, .item-price {
+.item-image {
+	display: flex;
+	flex-flow: column;
+	width: 50%;
+	margin-bottom: $padding;
+	padding: 0;
+}
+
+.item-details {
+	display: flex;
+	flex-flow: column;
+	width: 45%;
+	margin-bottom: $padding;
+	margin-left: 5%;
+	padding: 0;
+}
+
+
+.item-artist, .item-title {
+	font-size: 24px;
 	color: $black;
 	margin-bottom: 0;
 }
 
-.item-description {
+.item-title a {
+	color: $black;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.item-price,
+.item-label,
+.item-description,
+.item-quick-view {
 	color: $black;
 	font-size: 12px;
-	margin-top: $baseline;
 	margin-bottom: 0;
 }
 
@@ -55,7 +74,6 @@
 
 .item-bottom {
 	background: $white;
-	margin: 10px;
 	margin-top: 0;
 	padding: $item-padding;
 	padding-top: $item-padding * 0.5;
@@ -64,7 +82,6 @@
 .item-description {
 	color: $black;
 	font-size: 12px;
-	margin-top: $baseline;
 	margin-bottom: 0;
 }
 

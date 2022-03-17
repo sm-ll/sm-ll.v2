@@ -20,7 +20,7 @@ body {
 }
 
 a, a:active, a:focus, a:hover, a:visited {
-  color: $white;
+  color: $black;
 }
 
 img {
@@ -120,7 +120,13 @@ img {
   transition: all 0.1s ease-out;
 }
 
-.nav-link-text:hover, .nav-link-text:focus, .nav-link-text:active { color: $dark-mode-text-color; }
+.nav-link-text a, 
+.nav-link-text:hover, 
+.nav-link-text:focus, 
+.nav-link-text:active,
+.nav-link-text:visited { 
+  color: $white; 
+}
 
 .menu-toggler {
   display: block;
