@@ -7,7 +7,14 @@ module.exports = {
       title: `sm-ll`,
     siteUrl: `https://www.sm-l.com`
   },
-  plugins: [   
+  plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `home`,
+        path: `${__dirname}/home/`,
+      },
+    },  
     {
       resolve: `gatsby-plugin-typography`,
       options: {
@@ -30,7 +37,7 @@ module.exports = {
       options: {
         "name": "products",
         "path": "./products"
-      },      
+      },   
     __key: "pages"
   }]
 };

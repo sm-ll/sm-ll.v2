@@ -8,24 +8,22 @@ import {
   item,
   itemTop,
   itemTitle,
-  itemPrice,
-  itemBottom,
   itemDescription,
-  itemTags,
-  itemFeatures,
-  itemSelect,
-  itemDate,
   itemQuickView
 } from './store-item.module.scss'
 
 export default () => {
 	const data = useStaticQuery(graphql`
-		{
-		  allMdx {
+		query StoreItem {
+		  allMdx(
+		  	filter: {frontmatter: {title: {eq: ""}}}
+		  	sort: { fields: [frontmatter___Release_Date], order: DESC }
+		  	) {
 		    edges {
 		      node {
 		        frontmatter {
 		          Name
+		          Release_Date
 		        }
 		        slug
 		      }
@@ -40,7 +38,7 @@ export default () => {
 			    <div className={item}>
 			    	<div className={itemTop}>
 				    	<h3 className={itemTitle}><Link to={`/products/${node.slug}`}>{node.frontmatter.Name}</Link></h3>
-				    	<p className={itemDescription}>12" Black Cut Vinyl</p>
+				    	<p className={itemDescription}>{node.frontmatter.Format_Name}</p>
 							<img src={record} alt="record" />
 							<p className={itemQuickView}><a href="">Quick view</a></p>
 			    	</div>

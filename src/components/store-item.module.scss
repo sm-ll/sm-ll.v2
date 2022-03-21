@@ -10,6 +10,9 @@
 .item {
 	display: flex;
 	flex-flow: column;
+	@media only screen and (max-width:850px) {
+		width: 100%;
+	}
 	width: 25%;
 	margin-bottom: $padding;
 	padding: 0;

@@ -46,7 +46,7 @@ const IndexPage = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($id: String) {
+  query IndexPage ($id: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
         title

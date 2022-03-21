@@ -1,16 +1,13 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Layout from '../../components/layout'
 import "../../components/button.css"
 import record from '../../images/release.jpg'
 
 import {
-  itemList,
   item,
   itemImage,
   itemDetails,
-  itemRight,
   itemTop,
   itemArtist,
   itemTitle,
@@ -20,7 +17,6 @@ import {
   itemDescription,
   itemTags,
   itemFeatures,
-  itemSelect,
   itemDate
 } from './product.module.scss'
 
@@ -72,7 +68,7 @@ const ProductItem = ({ data }) => {
 }
 
 export const query = graphql`
-  query ($id: String) {
+  query ProductItem ($id: String) {
     mdx(id: {eq: $id}) {
       frontmatter {
         Artist_Creator
