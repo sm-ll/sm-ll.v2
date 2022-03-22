@@ -26,7 +26,7 @@ const Layout = ({ pageTitle, children }) => {
         <title>{pageTitle}</title>
         <h1 className={pageName}>{pageTitle}</h1>
         <input type="checkbox" id="menuToggler" className={inputToggler}/>
-        <label htmlFor="menuToggler" className={menuToggler}><span className={menuOpen}>Menu</span><span className={menuClose}>Close</span></label>      
+        <label htmlFor="menuToggler" className={menuToggler}><span className={menuOpen}>Menu</span><span className={menuClose}>Close</span></label>
         <nav className={bigNav}>
           <ul className={navLinks}>
             <li className={navLinkItem}>

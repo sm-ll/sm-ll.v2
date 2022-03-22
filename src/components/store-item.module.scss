@@ -42,7 +42,7 @@
 
 .item-price,
 .item-description,
-.item-quick-view {
+.quick-view-open {
 	color: $black;
 	font-size: 12px;
 	margin-bottom: 0;
@@ -121,3 +121,97 @@
 	margin-top: $baseline * 4;
 	margin-bottom: 0;
 }
+
+.quick-view {
+  opacity: 0;
+  z-index: -10;
+  position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0;
+}
+
+.input-view-toggler {
+  position: absolute;
+  left: -100%;
+}
+
+.quick-view-toggler {
+	cursor: pointer;
+}
+
+.quick-view-open {
+  display: block;
+  z-index: 15;
+}
+
+.input-view-toggler:checked ~ .quick-view {
+  opacity: 1;
+  z-index: 20;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .item {
+  	background: $quick-view-background-color;
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	height: 100%;
+  }
+}
+
+.quick-view .item {
+	width: 100%;
+	.item-top {
+		display: flex;
+		flex-flow: wrap;
+		flex-direction: row;
+		margin: 0;
+	}
+	.item-image {
+		display: flex;
+		flex-flow: column;
+		width: 25%;
+		margin-bottom: 0;
+		padding: 0;
+		img {
+			margin: 0;
+		}
+	}
+	.item-details {
+		display: flex;
+		flex-flow: column;
+		width: 74%;
+		margin-bottom: 0;
+		margin-left: 1%;
+		padding: 0;
+	}
+	.item-bottom {
+		padding-top: 0;
+	}
+}
+
+.quick-view-close {
+  display: none;
+}
+
+// .input-view-toggler:checked ~ .quick-view-toggler .quick-view-open {
+//   display: none;
+// }
+
+.input-view-toggler:checked ~ .quick-view-toggler .quick-view-close {
+  display: block;
+  position: fixed;
+  color: $black;
+  top: $item-padding;
+  right: $item-padding;
+  line-height: 1rem;
+  z-index: 40;
+}
+

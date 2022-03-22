@@ -7,8 +7,6 @@ body {
   background: $black;
 }
 
-// big nav
-
 :root {  --big-nav-width: 100%;
  --toggler-size: 30px;
 }
@@ -31,8 +29,6 @@ img {
 .container {
   margin: 0;
   width: auto;
-  // min-height: 100vh;
-  // min-width: 100vw;
   background: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -56,8 +52,6 @@ img {
 
 .big-nav {
   width: 100%;
- // -webkit-transform: translateX(calc(var(--big-nav-width) * -1));
- // transform: translateX(calc(var(--big-nav-width) * -1));
   background-color: $big-nav-background-color;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,8 +124,6 @@ img {
 
 .menu-toggler {
   display: block;
-  // height: 30px;
-  // width: calc(30px * 2.75);
   position: absolute;
   top: $padding * 0.75;
   right: $padding;
@@ -176,8 +168,6 @@ img {
 }
 
 .input-toggler:checked ~ .big-nav {
-  // -webkit-transform: translateX(0);
-  // transform: translateX(0);
   opacity: 1;
   z-index: 10;
 }
