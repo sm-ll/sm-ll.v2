@@ -68,8 +68,8 @@ export default () => {
 				    	<h3 className={itemTitle}><Link to={`/products/${node.slug}`}>{node.frontmatter.Name}</Link></h3>
 				    	<p className={itemDescription}>{node.frontmatter.Format_Name}</p>
 							<img src={record} alt="record" />
-							<input type="checkbox" id="quickViewToggler" className={inputViewToggler}/>
-							<label htmlFor="quickViewToggler" className={quickViewToggler}><span className={quickViewOpen}>Quick view</span><span className={quickViewClose}>Close</span></label>
+							<input type="checkbox" id={`${`/products/${node.slug}`} quickViewToggler`} className={inputViewToggler}/>
+							<label htmlFor={`${`/products/${node.slug}`} quickViewToggler`} className={quickViewToggler}><span className={quickViewOpen}>Quick view</span><span className={quickViewClose}>Close</span></label>
 							<div className={quickView}>
 								<div className={item}>
 				          <div className={itemTop}>
